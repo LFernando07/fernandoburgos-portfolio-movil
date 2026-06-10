@@ -2,7 +2,7 @@
 
 Aplicación móvil nativa multiplataforma para la **visualización de mi perfil profesional, trayectoria y certificaciones**, diseñada detalladamente con una interfaz moderna, animaciones interactivas de alto rendimiento y conectividad en tiempo real.
 
-![demo](./assets/images/portafolio_movil.png)
+![demo](.github/readme_assets//portafolio_movil.png)
 
 ## ✍️ Características
 
