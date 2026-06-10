@@ -11,25 +11,63 @@ export default function TabLayout() {
 
   return (
     <Tabs
+      initialRouteName="index"
       screenOptions={{
         tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
+        tabBarInactiveTintColor: '#666',
         headerShown: false,
         tabBarButton: HapticTab,
+        tabBarStyle: {
+          backgroundColor: '#1a1a2e',
+          borderTopColor: '#2a2a4e',
+          borderTopWidth: 1,
+          paddingTop: 4,
+          paddingBottom: 10,
+          height: 100,
+        },
+        tabBarLabelStyle: {
+          fontSize: 12,
+          fontWeight: '600',
+          paddingBottom: 4,
+        },
       }}>
+      <Tabs.Screen
+        name="contact"
+        options={{
+          title: 'Contactame',
+          tabBarIcon: ({ color }) => <IconSymbol size={28} name="person.2.fill" color={color} />,
+        }}
+      />
+      <Tabs.Screen
+        name="about"
+        options={{
+          title: 'Sobre Mi',
+          tabBarIcon: ({ color }) => <IconSymbol size={28} name="profile" color={color} />,
+        }}
+      />
       <Tabs.Screen
         name="index"
         options={{
           title: 'Home',
           tabBarIcon: ({ color }) => <IconSymbol size={28} name="house.fill" color={color} />,
+
         }}
       />
       <Tabs.Screen
-        name="explore"
+        name="experience"
         options={{
-          title: 'Explore',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="paperplane.fill" color={color} />,
+          title: 'Experiencia',
+          tabBarIcon: ({ color }) => <IconSymbol size={28} name="experience" color={color} />,
         }}
       />
+      <Tabs.Screen
+        name="projects"
+        options={{
+          title: 'Proyectos',
+          tabBarIcon: ({ color }) => <IconSymbol size={28} name="chevron.left.forwardslash.chevron.right" color={color} />,
+        }}
+      />
+
     </Tabs>
   );
 }
